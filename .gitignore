@@ -70,3 +70,5 @@ nohup.out
 #################################
 dump/
 diff/
+
+local-settings.py
