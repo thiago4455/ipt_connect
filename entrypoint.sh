@@ -1,7 +1,7 @@
-#!bin/sh
+#!bin/bash
 cd /ipt_connect
 
-if [ "$DEV" == "true" ]; then
+if [ "$DEV" = "true" ]; then
     python manage.py runserver 0.0.0.0:8000
     exit 1
 fi

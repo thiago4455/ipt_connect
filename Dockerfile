@@ -1,12 +1,15 @@
-FROM alpine
+FROM python:2
 
 ADD entrypoint.sh /entrypoint.sh
+ADD requirements.txt requirements.txt
 
 RUN \
     chmod +x /entrypoint.sh && \
-    apk add --update --no-cache python py-pip gettext && \
-    pip install --upgrade pip && \
-    pip install Django>=1.9 gunicorn && \
-    rm -rf /var/cache/apk/*
+    apt-get update && \
+    apt-get install -y --no-install-recommends gettext && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN pip install -r requirements.txt
+
+#ENTRYPOINT ["/entrypoint.sh"]
