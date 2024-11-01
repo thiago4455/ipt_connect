@@ -13,21 +13,17 @@ instance_name = list(reversed(instance_name.rsplit("/", 1)))[0]
 instance_name = list(reversed(instance_name.rsplit("\\", 1)))[0]
 
 NAME = {
-    "short": "IPT dev",
-    "full": "International Physicists' Tournament - Development Instance",
+    "short": "BPT",
+    "full": "Brazilian Physicists' Tournament - ",
     # ... and the name used in tournament overview
-    "front": "11th International Physicists' Tournament",
+    "front": "7th Brazilian Physicists' Tournament",
 }
 
 # Tournaments to switch to by the menu
 # Usually you should set it to None
 # This is useful only for development and first stages of Three Science Tournament
-sister_tournaments = (
-    ('IPT dev', '/IPT' + 'dev/'),
-    ('IPT dev (pf2)', '/IPT' + 'dev_pf2/'),
-)
 
-poster_url = "https://hsto.org/webt/zu/4_/cw/zu4_cwveq1izw4jst5yugtxng5q.png"
+poster_url = "/static/BPT/banner.png"
 
 website_url = "http://dev.iptnet.info"
 
@@ -161,10 +157,10 @@ fights = {
     # Sometimes it is useful to name fights like "Day 1 - Fight 2", or "Fight By Choice",
     # or "Semifinal A", or smth another.
     "names": [
-        "Selective Fight 1",
-        "Selective Fight 2",
-        "Selective Fight 3",
-        "Selective Fight 4",
+        "Fight Seletiva 1",
+        "Fight Seletiva 2",
+        "Fight Seletiva 3",
+        "Fight Seletiva 4",
         "Semifinal 1",
         "Semifinal 2",
         instance_name + " Final",

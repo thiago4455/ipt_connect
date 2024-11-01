@@ -28,15 +28,13 @@ SERVER_EMAIL = 'XXX'
 
 ADMINS = (('XXX', 'XXX@XXX'),)
 
-ALLOWED_HOSTS = [u"XXX", u"127.0.0.1", u"localhost"]
+ALLOWED_HOSTS = [u"*"]
 
 # Place all the names of the tournaments here
 # Default tournament (i.e. the one displayed on the main page) should be the first
 
 INSTALLED_TOURNAMENTS = (
-    'IPTdev',
-    'IPTdev_errors',
-    'IPTdev_pf2',
+    'BPT',
 )
 
 # Application definition
@@ -111,7 +109,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 LOCALE_PATHS = (os.path.join('locale'),)
 
@@ -140,3 +138,8 @@ CACHES = {
 
 SOLO_CACHE = 'default'
 SOLO_CACHE_TIMEOUT = 5 * 60
+
+try:
+    from ipt_connect.local_settings import *
+except ImportError:
+    pass

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Usage:
-# ./clone-instance.sh IPTdev IPTdev_pf2
-# `IPTdev` is the name of existing instance
-# `IPTdev_pf2` is the "shadow" of instance to be created
+# ./clone-instance.sh BPT BPT_pf2
+# `BPT` is the name of existing instance
+# `BPT_pf2` is the "shadow" of instance to be created
 
 trash-put $2
 ln -s $1 $2

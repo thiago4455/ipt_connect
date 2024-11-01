@@ -9,7 +9,7 @@ import numpy as np
 os.environ['DJANGO_SETTINGS_MODULE'] = "ipt_connect.settings"
 django.setup()
 
-from IPTdev.models import *
+from BPT.models import *
 
 jurys = Jury.objects.all()
 

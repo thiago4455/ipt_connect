@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Usage:
-# ./clone-instance.sh IPTdev IPT2020
-# IPTdev is the name of existing instance
-# IPT2020 is the name of instance to be created
+# ./clone-instance.sh BPT BPT2024
+# BPT is the name of existing instance
+# BPT2024 is the name of instance to be created
 
 echo "Cloning $1 into $2..."
 

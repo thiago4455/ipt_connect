@@ -4,7 +4,7 @@ import lxml.html
 
 head = 'http://127.0.0.1:8000'
 http = 'http:'
-dev = '/IPTdev/'
+dev = '/BPT/'
 urls = [
     'problems',
     'participants',

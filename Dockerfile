@@ -12,4 +12,4 @@ RUN \
 
 RUN pip install -r requirements.txt
 
-#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

@@ -1,0 +1,741 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-01 19:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: IPTdev/templates/IPTdev/bebacksoon.html:11
+msgid "A little bit of patience"
+msgstr "Um pouco de paciência"
+
+#: IPTdev/templates/IPTdev/bebacksoon.html:16
+msgid "Processing the grades..."
+msgstr "Processando as notas..."
+
+#: IPTdev/templates/IPTdev/build_tactics.html:9
+msgid "This is beta feature, use it at your own risk!"
+msgstr "Essa é uma funcionalidade beta, use-a ao seu próprio risco!"
+
+#: IPTdev/templates/IPTdev/build_tactics.html:22
+msgid "Build tactics!"
+msgstr "Construa táticas!"
+
+#: IPTdev/templates/IPTdev/build_tactics.html:30
+msgid "Problems available:"
+msgstr "Problemas disponíveis:"
+
+#: IPTdev/templates/IPTdev/build_tactics.html:38
+msgid "Problems forbidden:"
+msgstr "Problemas proibidos:"
+
+#: IPTdev/templates/IPTdev/head.html:46
+msgid "Physics Fights"
+msgstr "Physics Fights"
+
+#: IPTdev/templates/IPTdev/head.html:50 IPTdev/templates/IPTdev/head.html:52
+#: IPTdev/templates/IPTdev/poolranking.html:18
+#: IPTdev/templates/IPTdev/poolranking.html:27
+msgid "Ranking"
+msgstr "Classificação"
+
+#: IPTdev/templates/IPTdev/head.html:56
+msgid "Problems"
+msgstr "Problemas"
+
+#: IPTdev/templates/IPTdev/head.html:59
+#: IPTdev/templates/IPTdev/team_detail.html:19
+msgid "Participants"
+msgstr "Participantes"
+
+#: IPTdev/templates/IPTdev/head.html:62
+#: IPTdev/templates/IPTdev/round_detail.html:123
+msgid "Jury members"
+msgstr "Membros do júri"
+
+#: IPTdev/templates/IPTdev/includes/final_ranking_and_link.html:9
+msgid "Final Ranking"
+msgstr "Ranque final"
+
+#: IPTdev/templates/IPTdev/includes/final_ranking_and_link.html:20
+msgid "Final Fight details..."
+msgstr "Detalhes da Batalha Final"
+
+#: IPTdev/templates/IPTdev/includes/link_update_all_for_superuser.html:6
+msgid "Update all the scores (may take few minutes)"
+msgstr "Atualizar todas as pontuações (pode demorar alguns minutos)"
+
+#: IPTdev/templates/IPTdev/includes/list_forbidden_problems.html:8
+msgid "has already been "
+msgstr "já foi"
+
+#: IPTdev/templates/IPTdev/includes/list_forbidden_problems.html:11
+msgid "No forbidden problems."
+msgstr "Nenhum problema proibido"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:7
+msgid "Problem"
+msgstr "Problema"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:10
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Remarks"
+msgstr "Observações"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:20
+msgid "just presented"
+msgstr "acabou de ser apresentado"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:25
+msgid "apriori rejected by reporter"
+msgstr "rejeitado a priori pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:30
+msgid "eternally rejected by reporter"
+msgstr "rejeitado eternamente pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:35
+msgid "reported by reporter"
+msgstr "relatado pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:36
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:43
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:50
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:62
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:69
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:76
+msgid "grade:"
+msgstr "nota:"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:42
+msgid "opposed by opponent"
+msgstr "oposto pelo oponente"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:49
+msgid "reported by opponent"
+msgstr "relatado pelo oponente"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:56
+msgid "tried by opponent"
+msgstr "tentado pelo oponente"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:61
+msgid "reviewed by opponent"
+msgstr "revisado pelo oponente"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:68
+msgid "opposed by reporter"
+msgstr "oposto pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:75
+msgid "reviewed by reporter"
+msgstr "revisado pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:82
+msgid "tried by reporter"
+msgstr "tentado pelo apresentador"
+
+#: IPTdev/templates/IPTdev/includes/list_rounds.html:7
+#: IPTdev/templates/IPTdev/includes/summary.html:11
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:29
+msgid "Round"
+msgstr "Rodada"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:7
+msgid "Rank"
+msgstr "Classificação"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:8
+#: IPTdev/templates/IPTdev/includes/summary.html:7
+#: IPTdev/templates/IPTdev/participants_all.html:10
+#: IPTdev/templates/IPTdev/participants_export.html:5
+#: IPTdev/templates/IPTdev/participants_overview.html:26
+msgid "Team"
+msgstr "Time"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:9
+msgid "Points"
+msgstr "Pontos"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:11
+msgid "Semifinal points"
+msgstr "Pontos da semifinal"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:14
+msgid "Final points"
+msgstr "Pontos da final"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:17
+msgid "Pool"
+msgstr ""
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:20
+msgid "Physics Fights status"
+msgstr "Status"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:53
+msgid "fight ongoing"
+msgstr "fight em andamento"
+
+#: IPTdev/templates/IPTdev/includes/ranking_table.html:56
+msgid "fight(s) ended"
+msgstr "fight(s) encerrada(s)"
+
+#: IPTdev/templates/IPTdev/includes/semifinal_ranking.html:6
+msgid "Semifinal Ranking"
+msgstr "Classificação da Semifinal"
+
+#: IPTdev/templates/IPTdev/includes/summary.html:8
+msgid "Rep. mult."
+msgstr ""
+
+#: IPTdev/templates/IPTdev/includes/summary.html:17
+msgid "Sum"
+msgstr "Soma"
+
+#: IPTdev/templates/IPTdev/includes/summary.html:19
+msgid "Bonus"
+msgstr "Bônus"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:12
+msgid "Team Leader of"
+msgstr "Lider do time"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:15
+#: IPTdev/templates/IPTdev/jury_detail.html:17
+msgid "External jury member"
+msgstr "Membro externo do júri"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:27
+msgid "Problems graded"
+msgstr "Problemas avaliados"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:28
+msgid "Report grade"
+msgstr "Nota do apresentador"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:29
+msgid "Opposition grade"
+msgstr "Nota da oposição"
+
+#: IPTdev/templates/IPTdev/jury_detail.html:30
+msgid "Review grade"
+msgstr "Nota do reviewer"
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:9
+msgid "No jury member registered yet"
+msgstr "Nenhum membro do juri registrado ainda"
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:14
+msgid "Jury overview"
+msgstr ""
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:18
+#: IPTdev/templates/IPTdev/participants_overview.html:19
+msgid ""
+"Click on the names for detailed statistics. Click on the headers to sort the "
+"table."
+msgstr ""
+""
+"Clique nos nomes para estatisticas detalhadas. Clique no cabeçalho para ordenar"
+"a tabela."
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:25
+#: IPTdev/templates/IPTdev/participants_all.html:9
+#: IPTdev/templates/IPTdev/participants_export.html:5
+#: IPTdev/templates/IPTdev/participants_overview.html:25
+#: IPTdev/templates/IPTdev/problems_overview.html:25
+msgid "Name"
+msgstr "Nome"
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:26
+#: IPTdev/templates/IPTdev/problems_overview.html:27
+msgid "Mean Report grade"
+msgstr "Nota do Apresentador média"
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:27
+#: IPTdev/templates/IPTdev/problems_overview.html:28
+msgid "Mean Opposition grade"
+msgstr "Nota do Opositor média"
+
+#: IPTdev/templates/IPTdev/jurys_overview.html:28
+#: IPTdev/templates/IPTdev/problems_overview.html:29
+msgid "Mean Review grade"
+msgstr "Nota do Apresentador média"
+
+#: IPTdev/templates/IPTdev/listing_jurys.html:9
+#: IPTdev/templates/IPTdev/listing_jurys_web.html:9
+msgid "There is no registered jury member"
+msgstr "Não tem membro do júri registrado"
+
+#: IPTdev/templates/IPTdev/listing_participants_web.html:2
+#: IPTdev/templates/IPTdev/participants_export.html:2
+#: IPTdev/templates/IPTdev/participants_trombinoscope.html:2
+msgid "Participants of"
+msgstr "Participantes do"
+
+#: IPTdev/templates/IPTdev/listing_participants_web.html:12
+#: IPTdev/templates/IPTdev/participants_export.html:13
+msgid "There is no registered participant"
+msgstr "Não tem participante registrado"
+
+#: IPTdev/templates/IPTdev/participant_detail.html:12
+msgid "Member of the team from"
+msgstr "Membro do time de"
+
+#: IPTdev/templates/IPTdev/participant_detail.html:23
+msgid "Problem(s) presented"
+msgstr "Problema(s) apresentado"
+
+#: IPTdev/templates/IPTdev/participant_detail.html:24
+#: IPTdev/templates/IPTdev/team_detail.html:45
+msgid "Grade"
+msgstr "Nota"
+
+#: IPTdev/templates/IPTdev/participant_detail.html:25
+#: IPTdev/templates/IPTdev/participants_all.html:11
+#: IPTdev/templates/IPTdev/participants_export.html:5
+#: IPTdev/templates/IPTdev/team_detail.html:46
+msgid "Role"
+msgstr "Posição"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Affiliation"
+msgstr "Afiliação"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Surname"
+msgstr "Sobrenome"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Passport number"
+msgstr "Número do passaporte"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Gender"
+msgstr "Gênero"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Birthdate"
+msgstr "Data de nascimento"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Email"
+msgstr "Email"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Phone number"
+msgstr "Número de telefone"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Veteran"
+msgstr "Veterano"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Diet"
+msgstr "Dieta"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Mixed gender accomodation"
+msgstr "Acomodação de gênero misto"
+
+#: IPTdev/templates/IPTdev/participants_export.html:5
+msgid "Shirt size"
+msgstr "Tamanho da camisa"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:10
+msgid "Participants are not yet registered"
+msgstr "Participantes não registrados ainda"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:15
+msgid "Participants overview"
+msgstr "Overview dos participantes"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:29
+msgid "Points (sum)"
+msgstr "Pontos (soma)"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:34
+msgid "Mean grade"
+msgstr "Nota média"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:38
+msgid "Mean Rep. grade"
+msgstr "Nota de Apresentador média"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:42
+msgid "Mean Opp. grade"
+msgstr "Nota de Opositor média"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:46
+msgid "Mean Rev. grade"
+msgstr "Nota de Revisor média"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:51
+msgid "Best Rep. grade"
+msgstr "Melhor nota de Apresentador"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:55
+msgid "Best Opp. grade"
+msgstr "Melhor nota de Opositor"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:59
+msgid "Best Rev. grade"
+msgstr "Melhor nota de Revisor"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:63
+msgid "Best grade"
+msgstr "Melhor nota"
+
+#: IPTdev/templates/IPTdev/participants_overview.html:68
+msgid "Personal ranking"
+msgstr "Qualificação pessoal"
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:14
+msgid "Room"
+msgstr "Sala"
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:38
+msgid "Jurés"
+msgstr ""
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:44
+msgid "Rep."
+msgstr "Rel."
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:47
+msgid "Opp."
+msgstr "Opo."
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:51
+msgid "Rev."
+msgstr "Rev."
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:97
+#: IPTdev/templates/IPTdev/problem_detail.html:64
+#: IPTdev/templates/IPTdev/round_detail.html:144
+msgid "MEAN"
+msgstr "MÉDIA"
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:116
+#: IPTdev/templates/IPTdev/round_detail.html:157
+msgid ""
+"The lowest and highest grade(s) might be discarded according to the number "
+"of jury members."
+msgstr "As notas mais altas e mais baixas podem ser descartadas de acordo"
+"com o numero de jurados."
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:125
+msgid "No grade registered so far !"
+msgstr "Nenhuma nota registrada ainda !"
+
+#: IPTdev/templates/IPTdev/physics_fight_detail.html:133
+msgid "No round played so far !"
+msgstr "Nenhum round jogado ainda !"
+
+#: IPTdev/templates/IPTdev/poolranking.html:9
+msgid "Teams are not registered or not distributed into pools"
+msgstr "Times não estão registrados ou não distribuidos em grupos"
+
+#: IPTdev/templates/IPTdev/poolranking.html:18
+msgid "Pool A"
+msgstr "Grupo A"
+
+#: IPTdev/templates/IPTdev/poolranking.html:27
+msgid "Pool B"
+msgstr "Grupo B"
+
+#: IPTdev/templates/IPTdev/poolranking.html:36
+msgid "General Ranking"
+msgstr "Classificação General"
+
+#: IPTdev/templates/IPTdev/problem_detail.html:34
+msgid "Report"
+msgstr "Apresentador"
+
+#: IPTdev/templates/IPTdev/problem_detail.html:35
+msgid "Opposition"
+msgstr "Oposição"
+
+#: IPTdev/templates/IPTdev/problem_detail.html:36
+msgid "Review"
+msgstr "Revisor"
+
+#: IPTdev/templates/IPTdev/problem_detail.html:76
+#: IPTdev/templates/IPTdev/team_detail.html:111
+msgid "Supplementary Materials"
+msgstr "Materiais Suplementares"
+
+#: IPTdev/templates/IPTdev/problems_overview.html:9
+msgid "No problem registered yet"
+msgstr "Nenhum problema registrado ainda"
+
+#: IPTdev/templates/IPTdev/problems_overview.html:15
+msgid "Problems overview"
+msgstr "Overview dos problemas"
+
+#: IPTdev/templates/IPTdev/problems_overview.html:19
+msgid ""
+"Click on the problem names for detailed statistics. Click on the headers to "
+"sort the table."
+msgstr ""
+"Clique no nome do problema para estatisticas detalhadas. Clique no cabeçalho "
+"para ordenar a tabela."
+
+#: IPTdev/templates/IPTdev/problems_overview.html:26
+msgid "# of presentations"
+msgstr "# de apresentações"
+
+#: IPTdev/templates/IPTdev/ranking.html:9
+msgid "No team registered yet"
+msgstr "Nenhum time registrado ainda"
+
+#: IPTdev/templates/IPTdev/ranking.html:18
+msgid "Selective Fights Ranking"
+msgstr "Classificação de Fights Seletiva"
+
+#: IPTdev/templates/IPTdev/ranking.html:28
+msgid "Pools Ranking"
+msgstr "Classificação dos grupos"
+
+#: IPTdev/templates/IPTdev/round_detail.html:23
+msgid "Edit"
+msgstr "Editar"
+
+#: IPTdev/templates/IPTdev/round_detail.html:26
+msgid "Add next"
+msgstr "Adicionar próximo"
+
+#: IPTdev/templates/IPTdev/round_detail.html:45
+msgid "Reporter"
+msgstr "Apresentador"
+
+#: IPTdev/templates/IPTdev/round_detail.html:46
+msgid "Opponent"
+msgstr "Oponente"
+
+#: IPTdev/templates/IPTdev/round_detail.html:48
+msgid "Reviewer"
+msgstr "Revisor"
+
+#: IPTdev/templates/IPTdev/round_detail.html:110
+msgid "Problem presented"
+msgstr "Problema apresentado"
+
+#: IPTdev/templates/IPTdev/round_detail.html:124
+msgid "Reporter grade"
+msgstr "Nota do Apresentador"
+
+#: IPTdev/templates/IPTdev/round_detail.html:125
+msgid "Opponent grade"
+msgstr "Nota do Oponente"
+
+#: IPTdev/templates/IPTdev/round_detail.html:127
+msgid "Reviewer grade"
+msgstr "Nota do Revisor"
+
+#: IPTdev/templates/IPTdev/round_detail.html:166
+msgid "Rejection(s)"
+msgstr "Rejeições"
+
+#: IPTdev/templates/IPTdev/round_detail.html:171
+msgid "Tactical rejection(s)"
+msgstr "Rejeições tácticas"
+
+#: IPTdev/templates/IPTdev/round_detail.html:175
+msgid "No tactical rejections"
+msgstr "Nenhuma rejeição táctica"
+
+#: IPTdev/templates/IPTdev/round_detail.html:180
+msgid "Tactical rejections are not displayed"
+msgstr "Rejeições tácticas não são exibidas"
+
+#: IPTdev/templates/IPTdev/round_detail.html:187
+#: IPTdev/templates/IPTdev/team_detail.html:95
+msgid "Eternal rejection(s)"
+msgstr "Rejeições eternas"
+
+#: IPTdev/templates/IPTdev/round_detail.html:191
+#: IPTdev/templates/IPTdev/team_detail.html:103
+msgid "No eternal rejections"
+msgstr "Nenhuma rejeição eterna"
+
+#: IPTdev/templates/IPTdev/round_detail.html:202
+msgid "This round has not started yet !"
+msgstr "Essa rodada ainda não começou!"
+
+#: IPTdev/templates/IPTdev/rounds.html:9
+msgid "No round has been played yet"
+msgstr "Essa rodada ainda não foi jogada"
+
+#: IPTdev/templates/IPTdev/rounds.html:14
+msgid "Rounds overview"
+msgstr "Visão geral da rodada"
+
+#: IPTdev/templates/IPTdev/rounds.html:18
+msgid ""
+"Click on a Round to get a detailed summary. Click on a Physics Fight to get "
+"a summarized view of all the corresponding Rounds."
+msgstr ""
+"Clique em uma Rodada para obter um sumário detalhado. Clique em uma Physics Fight para "
+"obter uma visualização de todos as rodadas correspondentes"
+
+#: IPTdev/templates/IPTdev/rounds.html:96
+msgid "The Grand Finale"
+msgstr "O Grande Final"
+
+#: IPTdev/templates/IPTdev/team_detail.html:14
+msgid "with"
+msgstr "com"
+
+#: IPTdev/templates/IPTdev/team_detail.html:14
+#: IPTdev/templates/IPTdev/team_detail.html:22
+msgid "points"
+msgstr "pontos"
+
+#: IPTdev/templates/IPTdev/team_detail.html:22
+msgid "gathered"
+msgstr "obtido"
+
+#: IPTdev/templates/IPTdev/team_detail.html:27
+msgid "Team-Leaders:"
+msgstr "Líderes de Time:"
+
+#: IPTdev/templates/IPTdev/team_detail.html:35
+msgid "(jury member)"
+msgstr "(membro do júri)"
+
+#: IPTdev/templates/IPTdev/team_detail.html:44
+msgid "Problems presented"
+msgstr "Problemas apresentados"
+
+#: IPTdev/templates/IPTdev/team_detail.html:63
+msgid "Penalties"
+msgstr "Penalidades"
+
+#: IPTdev/templates/IPTdev/team_detail.html:66
+msgid "Multiplicative coefficient of"
+msgstr "Coeficiente multiplicativo de"
+
+#: IPTdev/templates/IPTdev/team_detail.html:66
+msgid "for the Reporter in the"
+msgstr "para o Apresentador no"
+
+#: IPTdev/templates/IPTdev/team_detail.html:66
+msgid "Physics Fight"
+msgstr ""
+
+#: IPTdev/templates/IPTdev/team_detail.html:70
+msgid "Bonus points"
+msgstr "Pontos bônus"
+
+#: IPTdev/templates/IPTdev/team_detail.html:75
+msgid "None"
+msgstr "Nenhum"
+
+#: IPTdev/templates/IPTdev/team_detail.html:83
+msgid "Apriori rejection(s)"
+msgstr "Rejeções a priori"
+
+#: IPTdev/templates/IPTdev/team_detail.html:87
+msgid "No apriori rejections"
+msgstr "Nenhuma rejeição a priori"
+
+#: IPTdev/templates/IPTdev/teams_overview.html:6
+msgid "Teams Overview"
+msgstr "Visão geral dos Times"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:7
+msgid "Welcome!"
+msgstr "Bem vindo!"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:20
+msgid "This interface gathers the results of the "
+msgstr "Essa interface agrega os resultados do"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:24
+msgid ""
+"Most of the displayed elements can be clicked on. You can access teams, "
+"individual participant or jury member statistics, as well as details of each "
+"Round, Physics Fights and Problem."
+msgstr ""
+"A maior parte dos elementos exibidos podem ser clicados. Você pode acessar times, "
+"participantes individuais ou estatisticas de membros do juro, assim como detalhes de cada "
+"Rodada, Physics Fights e Problemas."
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:27
+msgid ""
+"The results are updated once after each round - you will be notified via "
+"email once the update has been made."
+msgstr ""
+"Os resultados são atualizados uma vez no final de cada round - você será notificado via "
+"email uma vez que a atualização foi feita."
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:31
+msgid ""
+"In case you spot a bug or have any suggestion to improve the software, "
+"please don't hesitate to open an issue"
+msgstr ""
+"Caso encontre um problema ou tem alguma sugestão para melhorar o software, "
+"por favor não hesite em abrir um issue"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:32
+msgid "at our repository"
+msgstr "no nosso repositório"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:33
+msgid "or to get in touch with us at webmaster (a) iptnet (dot) info."
+msgstr "ou obter em contato com nós em webmaster (a) iptnet (dot) info."
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:37
+msgid "You can also try"
+msgstr "Você pode também testar"
+
+#: IPTdev/templates/IPTdev/tournament_overview.html:38
+msgid "this beta tool to list forbidden problems."
+msgstr "essa ferramenta beta para listar os problemas proíbidos."
+
+#: IPTdev/templates/IPTdev/verify_all.html:7
+msgid ""
+"This interface reports about some situations that are not normal when a "
+"Fight has been just completed."
+msgstr ""
+"Essa interface reporta sobre algumas situações que não são normal quando uma "
+"Fight acabou de ser concluída."
+
+#: IPTdev/templates/IPTdev/verify_all.html:12
+msgid "Errors"
+msgstr "Erros"
+
+#: IPTdev/templates/IPTdev/verify_all.html:28
+msgid "No errors encountered"
+msgstr "Nenhum erro encontrado"
+
+#: IPTdev/templates/IPTdev/verify_all.html:34
+msgid "Warnings"
+msgstr "Avisos"
+
+#: IPTdev/templates/IPTdev/verify_all.html:50
+msgid "No warnings encountered"
+msgstr "Nenhum aviso encontrado"
+
+#: IPTdev/templates/IPTdev/verify_all.html:56
+msgid "Successful checks"
+msgstr "Verificações com sucesso"
+
+#: IPTdev/templates/IPTdev/verify_all.html:64
+msgid "No successful checks"
+msgstr "Nenhuma verficação com sucesso"
