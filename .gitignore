@@ -1,6 +1,5 @@
 *.pyc
 *TODO.txt
-*migrations*
 .venv
 .vscode
 .idea
