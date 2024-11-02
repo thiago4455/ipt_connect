@@ -7,10 +7,10 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from django.utils.translation import get_language
 
-from cache_per_user import cache_per_user as cache_page
-from forms import UploadForm
-from model_SupplementaryMaterial import SupplementaryMaterial
-from models import *
+from .cache_per_user import cache_per_user as cache_page
+from .forms import UploadForm
+from .model_SupplementaryMaterial import SupplementaryMaterial
+from .models import *
 
 
 def home(request):
@@ -840,7 +840,7 @@ def round_detail(request, pk):
         raise Http404()
 
     # TODO: rewrite the following in pythonish way!!!
-    from tactics import make_old_fashioned_list_from_tactics_data
+    from .tactics import make_old_fashioned_list_from_tactics_data
 
     jurygrades = JuryGrade.objects.filter(round=round).order_by('jury__name')
     meangrades = []

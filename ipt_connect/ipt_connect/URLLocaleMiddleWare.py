@@ -8,7 +8,7 @@ class URLLocaleMiddleware:
         for (url, loc) in url_locale:
             if request.path.startswith(url):
                 request.LANG = loc
-                print request.LANG
+                print(request.LANG)
                 translation.activate(request.LANG)
                 request.LANGUAGE_CODE = request.LANG
 

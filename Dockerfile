@@ -1,4 +1,4 @@
-FROM python:2
+FROM python:3
 
 ADD entrypoint.sh /entrypoint.sh
 ADD requirements.txt requirements.txt

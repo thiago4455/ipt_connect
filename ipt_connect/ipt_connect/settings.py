@@ -56,16 +56,16 @@ MIGRATION_MODULES = dict(
     [(app, app + '.migrations.' + app) for app in INSTALLED_TOURNAMENTS]
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #    'django.middleware.security.SecurityMiddleware',
-    'ipt_connect.URLLocaleMiddleWare.URLLocaleMiddleware',
+    #'ipt_connect.URLLocaleMiddleWare.URLLocaleMiddleware',
 )
 
 ROOT_URLCONF = 'ipt_connect.urls'
@@ -138,6 +138,8 @@ CACHES = {
 
 SOLO_CACHE = 'default'
 SOLO_CACHE_TIMEOUT = 5 * 60
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
 
 try:
     from ipt_connect.local_settings import *

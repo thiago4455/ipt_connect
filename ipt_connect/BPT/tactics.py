@@ -1,4 +1,4 @@
-from views import *
+from .views import *
 
 
 def build_tactics_for_two_teams(reporter_team, opponent_team, current_round=None):
