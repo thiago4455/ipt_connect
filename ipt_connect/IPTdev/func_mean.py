@@ -18,7 +18,7 @@ def ipt_mean(vec):
     # There was an unsuccessful attempt to refactor it.
     # The code should be refactored and tested.
 
-    nhigh = nreject / 2
+    nhigh = nreject // 2
     nlow = nreject - nhigh
 
     if nhigh == 0:
