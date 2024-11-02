@@ -21,7 +21,7 @@ NAME = {
 
 poster_url = "/static/BPT/banner.png"
 
-website_url = "http://dev.iptnet.info"
+website_url = "https://brazil.iptnet.info"
 
 repo_url = "https://github.com/IPTnet/ipt_connect"
 
