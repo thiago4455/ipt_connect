@@ -96,7 +96,7 @@ no matter is the round finished or not
 	-->
 	{% if display_problems_forbidden and round.reporter_team and round.opponent_team %}
 		<div class="content container">
-			<h2>Problem(s) forbidden:</h2>
+			<h2>{% trans 'Problems forbidden:' %}</h2>
 		{% include params.instance_name|add:'/includes/list_forbidden_problems.html' with forbidden_problems=unavailable_problems %}
 		</div>
 	{% endif %}
