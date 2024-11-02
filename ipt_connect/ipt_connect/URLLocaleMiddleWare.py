@@ -1,9 +1,10 @@
 from django.utils import translation
+from django.utils.deprecation import MiddlewareMixin
 
 url_locale = (('/FPT2017', 'fr'),)
 
 
-class URLLocaleMiddleware:
+class URLLocaleMiddleware(MiddlewareMixin):
     def process_request(self, request):
         for (url, loc) in url_locale:
             if request.path.startswith(url):

@@ -1,4 +1,4 @@
-from views import *
+from .views import *
 
 
 def build_tactics_for_two_teams(reporter_team, opponent_team, current_round=None):
@@ -51,14 +51,14 @@ def build_tactics_for_two_teams(reporter_team, opponent_team, current_round=None
                 # Will be filled later
                 # TODO: is it possible to cast a lambda here?
             ),
-            'apriori_rejected_by_reporter': map(
+            'apriori_rejected_by_reporter': list(map(
                 lambda rejection: None,
                 list(apri_rej.filter(team=reporter_team)),
-            ),
-            'eternally_rejected_by_reporter': map(
+            )),
+            'eternally_rejected_by_reporter': list(map(
                 lambda rejection: rejection.round,
                 list(eter_rej.filter(round__reporter_team=reporter_team)),
-            ),
+            )),
             'reported_by_reporter': list(atrounds.filter(reporter_team=reporter_team)),
             'opposed_by_opponent': list(atrounds.filter(opponent_team=opponent_team)),
             'reported_by_opponent': list(atrounds.filter(reporter_team=opponent_team)),
@@ -66,11 +66,11 @@ def build_tactics_for_two_teams(reporter_team, opponent_team, current_round=None
             # If the opponent tried to challenge for a problem and received a rejection,
             # it is likely that the opponent will try to challenge for the same problem again.
             # This knowledge is obviously valuable for the reporter ;-)
-            'tried_by_opponent': map(
+            'tried_by_opponent': list(map(
                 lambda rejection: rejection.round,
                 list(tact_rej.filter(round__opponent_team=opponent_team))
                 + list(eter_rej.filter(round__opponent_team=opponent_team)),
-            ),
+            )),
             # The same thing for reviewing
             'reviewed_by_opponent': list(atrounds.filter(reviewer_team=opponent_team)),
             # reporter's oppositions...
@@ -78,11 +78,11 @@ def build_tactics_for_two_teams(reporter_team, opponent_team, current_round=None
             # ... and for reporter's reviews - no idea what for
             'reviewed_by_reporter': list(atrounds.filter(reviewer_team=reporter_team)),
             # Crazyness must go on!
-            'tried_by_reporter': map(
+            'tried_by_reporter': list(map(
                 lambda rejection: rejection.round,
                 list(tact_rej.filter(round__opponent_team=reporter_team))
                 + list(eter_rej.filter(round__opponent_team=reporter_team)),
-            ),
+            )),
         }
 
         for round in previous_rounds:
@@ -197,7 +197,7 @@ class TacticsForm(forms.Form):
     try:
         # This fails if no teams are registered (which is essentially for a new tournament)
         all_teams = Team.objects.all()
-        team_choices = map(lambda team: (team.pk, team), all_teams)
+        team_choices = [(team.pk, team) for team in all_teams]
         reporter_team = forms.ChoiceField(label='Reporter team', choices=team_choices)
         opponent_team = forms.ChoiceField(label='Opponent team', choices=team_choices)
     except:

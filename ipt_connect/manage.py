@@ -23,7 +23,7 @@ if __name__ == "__main__":
     from django.core.management import execute_from_command_line
 
     if sys.argv[1] == "runserver":
-        if is_po_updated("locale") or is_po_updated("loginas/locale"):
+        if is_po_updated("locale"):
             execute_from_command_line(["manage.py", "compilemessages"])
 
     execute_from_command_line(sys.argv)

@@ -33,7 +33,7 @@ def cache_per_user(ttl=None, prefix=None):
             # No caching for authorized users:
             # they have to see the results of their edits immideately!
 
-            can_cache = request.user.is_anonymous() and request.method == 'GET'
+            can_cache = request.user.is_anonymous and request.method == 'GET'
 
             # Gera a chave do cache
             if prefix:
@@ -47,7 +47,7 @@ def cache_per_user(ttl=None, prefix=None):
                 response = None
 
             if not response:
-                print 'Not in cache: %s' % (CACHE_KEY)
+                print('Not in cache: %s' % (CACHE_KEY))
                 response = function(request, *args, **kwargs)
                 if can_cache:
                     cache.set(CACHE_KEY, response, ttl)

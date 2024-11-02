@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from get_script_dir import get_script_dir
+from .get_script_dir import get_script_dir
 
 # Here we get the name of the folder in which THIS FILE is located.
 # It is probably NOT the current working directory.

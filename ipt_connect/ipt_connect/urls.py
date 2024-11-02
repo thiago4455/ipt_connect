@@ -1,7 +1,7 @@
 import importlib
 
 from django.conf import settings
-from django.conf.urls import include, url
+from django.urls import include, re_path
 from django.contrib import admin
 
 tournament_overview = importlib.import_module(
@@ -12,16 +12,15 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'ipt_connect.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^grappelli/', include('grappelli.urls')),  # grappelli URLS
+    re_path(r'^grappelli/', include('grappelli.urls')),  # grappelli URLS
     # url(r'^$', home, name='home'), #TemplateView.as_view(template_name='index.html')),#'ipt_connect.views.home'),
-    url(r'^$', tournament_overview),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin/', include('loginas.urls')),
+    re_path(r'^$', tournament_overview),
+    re_path(r'^admin/', admin.site.urls),
 ]
 
 for tournament in settings.INSTALLED_TOURNAMENTS:
     urlpatterns.append(
-        url(
+        re_path(
             r'^' + tournament + '/', include(tournament + '.urls', namespace=tournament)
         ),
     )

@@ -1,7 +1,6 @@
 # coding: utf8
 import os
 import time
-from string import replace
 from uuid import uuid4
 
 from django.contrib.auth.models import User
@@ -16,9 +15,9 @@ from django.utils.deconstruct import deconstructible
 from django.utils.encoding import iri_to_uri
 from solo.models import SingletonModel
 
-import func_mean as means
-import parameters as params
-from func_bonus import distribute_bonus_points
+from . import func_mean as means
+from . import parameters as params
+from .func_bonus import distribute_bonus_points
 
 # Useful static variables
 selective_fights = [i + 1 for i in range(params.npf)]
@@ -120,7 +119,7 @@ class Participant(models.Model):
     passport_number = models.CharField(blank=True, max_length=50)
     birthdate = models.DateField(default='1900-01-31', verbose_name='Birthdate')
     # photo = models.ImageField(upload_to=UploadToPathAndRename(params.instance_name+'/id_photo'),help_text="Please use a clear ID photo. This will be used for badges and transportation cards.", null=True)
-    team = models.ForeignKey('Team', null=True, verbose_name='Team')
+    team = models.ForeignKey('Team', null=True, verbose_name='Team', on_delete=models.CASCADE)
     role = models.CharField(
         max_length=20,
         choices=ROLE_CHOICES,
@@ -166,7 +165,7 @@ class Participant(models.Model):
         """
         return self.name + ' ' + self.surname
 
-    def __unicode__(self):
+    def __str__(self):
         """
         :return: return the full name of the participant
         """
@@ -252,7 +251,7 @@ class Problem(models.Model):
     mean_score_of_opponents = models.FloatField(default=0.0, editable=False)
     mean_score_of_reviewers = models.FloatField(default=0.0, editable=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def status(self, verbose=True, meangradesonly=False):
@@ -392,7 +391,7 @@ class Team(models.Model):
     nrounds_as_opp = models.IntegerField(default=0, editable=False)
     nrounds_as_rev = models.IntegerField(default=0, editable=False)
 
-    def __unicode__(self):
+    def __str__(self):
 
         return self.name
 
@@ -601,7 +600,7 @@ class Room(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=2083, blank=True, default='')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     @property
@@ -625,7 +624,7 @@ class Jury(models.Model):
         """
         return self.name + ' ' + self.surname
 
-    def __unicode__(self):
+    def __str__(self):
         return self.fullname()
 
     email = models.EmailField(
@@ -639,7 +638,7 @@ class Jury(models.Model):
         verbose_name='Affiliation to display',
         help_text='Will be used for export (badges and web).',
     )
-    team = models.ForeignKey('Team', null=True, blank=True)
+    team = models.ForeignKey('Team', null=True, blank=True, on_delete=models.CASCADE)
     # TODO: unhardcode PF number!
     pf1 = models.BooleanField(default=False, verbose_name='PF 1')
     pf2 = models.BooleanField(default=False, verbose_name='PF 2')
@@ -666,29 +665,29 @@ class Round(models.Model):
         ),
         default=None,
     )
-    room = models.ForeignKey(Room)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
     reporter_team = models.ForeignKey(
-        Team, related_name='reporterteam', blank=True, null=True
+        Team, related_name='reporterteam', blank=True, null=True, on_delete=models.CASCADE
     )
     opponent_team = models.ForeignKey(
-        Team, related_name='opponentteam', blank=True, null=True
+        Team, related_name='opponentteam', blank=True, null=True, on_delete=models.CASCADE
     )
     reviewer_team = models.ForeignKey(
-        Team, related_name='reviewerteam', blank=True, null=True
+        Team, related_name='reviewerteam', blank=True, null=True, on_delete=models.CASCADE
     )
     reporter = models.ForeignKey(
-        Participant, related_name='reporter_name_1', blank=True, null=True
+        Participant, related_name='reporter_name_1', blank=True, null=True, on_delete=models.CASCADE
     )
     reporter_2 = models.ForeignKey(
-        Participant, related_name='reporter_name_2', blank=True, null=True
+        Participant, related_name='reporter_name_2', blank=True, null=True, on_delete=models.CASCADE
     )
     opponent = models.ForeignKey(
-        Participant, related_name='opponent_name', blank=True, null=True
+        Participant, related_name='opponent_name', blank=True, null=True, on_delete=models.CASCADE
     )
     reviewer = models.ForeignKey(
-        Participant, related_name='reviewer_name', blank=True, null=True
+        Participant, related_name='reviewer_name', blank=True, null=True, on_delete=models.CASCADE
     )
-    problem_presented = models.ForeignKey(Problem, blank=True, null=True)
+    problem_presented = models.ForeignKey(Problem, blank=True, null=True, on_delete=models.CASCADE)
     submitted_date = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
     score_reporter = models.FloatField(default=0.0, editable=False)
@@ -705,7 +704,7 @@ class Round(models.Model):
         default=0.0, editable=params.manual_bonus_points
     )
 
-    def __unicode__(self):
+    def __str__(self):
         try:
             fight_name = params.fights['names'][self.pf_number - 1]
         except:
@@ -844,8 +843,8 @@ class Round(models.Model):
 
 
 class JuryGrade(models.Model):
-    round = models.ForeignKey(Round, null=True)
-    jury = models.ForeignKey(Jury)
+    round = models.ForeignKey(Round, null=True, on_delete=models.CASCADE)
+    jury = models.ForeignKey(Jury, on_delete=models.CASCADE)
 
     grade_reporter = models.IntegerField(choices=grade_choices, default=None)
 
@@ -853,7 +852,7 @@ class JuryGrade(models.Model):
 
     grade_reviewer = models.IntegerField(choices=grade_choices, default=None)
 
-    def __unicode__(self):
+    def __str__(self):
         return "Grade of %s" % self.jury.name
 
     def info(self):
@@ -881,36 +880,36 @@ class JuryGrade(models.Model):
 
 
 class TacticalRejection(models.Model):
-    round = models.ForeignKey(Round, null=True)
-    problem = models.ForeignKey(Problem)
+    round = models.ForeignKey(Round, null=True, on_delete=models.CASCADE)
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE)
     extra_free = models.BooleanField(
         default=False,
         verbose_name='Extra free rejection',
         editable=params.enable_extra_free_tactical_rejections,
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "Problem rejected : %s" % self.problem.pk
 
 
 class EternalRejection(models.Model):
-    round = models.ForeignKey(Round, null=True)
-    problem = models.ForeignKey(Problem)
+    round = models.ForeignKey(Round, null=True, on_delete=models.CASCADE)
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE)
     extra_free = models.BooleanField(
         default=False,
         verbose_name='Extra free rejection',
         editable=params.enable_extra_free_eternal_rejections,
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "Problem rejected : %s" % self.problem.pk
 
 
 class AprioriRejection(models.Model):
-    team = models.ForeignKey(Team, null=True)
-    problem = models.ForeignKey(Problem)
+    team = models.ForeignKey(Team, null=True, on_delete=models.CASCADE)
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         # TODO: also print the Team
         return "Problem rejected : %s" % self.problem.pk
 
@@ -962,7 +961,7 @@ class SiteConfiguration(SingletonModel):
     image_URL = models.URLField(default="http://i.imgur.com/QH8aoXL.gif")
     image_repeat_count = models.IntegerField(default=6)
 
-    def __unicode__(self):
+    def __str__(self):
         return u"Site Configuration"
 
     class Meta:
