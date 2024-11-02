@@ -130,11 +130,11 @@ msgstr "relatado pelo oponente"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:56
 msgid "tried by opponent"
-msgstr "tentado pelo oponente"
+msgstr "desafiado pelo oponente"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:61
 msgid "reviewed by opponent"
-msgstr "revisado pelo oponente"
+msgstr "moderado pelo oponente"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:68
 msgid "opposed by reporter"
@@ -142,11 +142,11 @@ msgstr "oposto pelo apresentador"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:75
 msgid "reviewed by reporter"
-msgstr "revisado pelo apresentador"
+msgstr "moderado pelo apresentador"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:82
 msgid "tried by reporter"
-msgstr "tentado pelo apresentador"
+msgstr "desafiado pelo apresentador"
 
 #: IPTdev/templates/IPTdev/includes/list_rounds.html:7
 #: IPTdev/templates/IPTdev/includes/summary.html:11
