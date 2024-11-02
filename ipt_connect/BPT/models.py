@@ -165,7 +165,7 @@ class Participant(models.Model):
         """
         return self.name + ' ' + self.surname
 
-    def __unicode__(self):
+    def __str__(self):
         """
         :return: return the full name of the participant
         """
@@ -251,7 +251,7 @@ class Problem(models.Model):
     mean_score_of_opponents = models.FloatField(default=0.0, editable=False)
     mean_score_of_reviewers = models.FloatField(default=0.0, editable=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def status(self, verbose=True, meangradesonly=False):
@@ -391,9 +391,9 @@ class Team(models.Model):
     nrounds_as_opp = models.IntegerField(default=0, editable=False)
     nrounds_as_rev = models.IntegerField(default=0, editable=False)
 
-    def __unicode__(self):
-
+    def __str__(self):
         return self.name
+
 
     def presentation_coefficients(self, verbose=False):
         """
@@ -600,7 +600,7 @@ class Room(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=2083, blank=True, default='')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     @property
@@ -624,7 +624,7 @@ class Jury(models.Model):
         """
         return self.name + ' ' + self.surname
 
-    def __unicode__(self):
+    def __str__(self):
         return self.fullname()
 
     email = models.EmailField(
@@ -704,7 +704,7 @@ class Round(models.Model):
         default=0.0, editable=params.manual_bonus_points
     )
 
-    def __unicode__(self):
+    def __str__(self):
         try:
             fight_name = params.fights['names'][self.pf_number - 1]
         except:
@@ -852,7 +852,7 @@ class JuryGrade(models.Model):
 
     grade_reviewer = models.IntegerField(choices=grade_choices, default=None)
 
-    def __unicode__(self):
+    def __str__(self):
         return "Grade of %s" % self.jury.name
 
     def info(self):
@@ -888,7 +888,7 @@ class TacticalRejection(models.Model):
         editable=params.enable_extra_free_tactical_rejections,
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "Problem rejected : %s" % self.problem.pk
 
 
@@ -901,7 +901,7 @@ class EternalRejection(models.Model):
         editable=params.enable_extra_free_eternal_rejections,
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "Problem rejected : %s" % self.problem.pk
 
 
@@ -909,7 +909,7 @@ class AprioriRejection(models.Model):
     team = models.ForeignKey(Team, null=True, on_delete=models.CASCADE)
     problem = models.ForeignKey(Problem, on_delete=models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         # TODO: also print the Team
         return "Problem rejected : %s" % self.problem.pk
 
@@ -961,7 +961,7 @@ class SiteConfiguration(SingletonModel):
     image_URL = models.URLField(default="http://i.imgur.com/QH8aoXL.gif")
     image_repeat_count = models.IntegerField(default=6)
 
-    def __unicode__(self):
+    def __str__(self):
         return u"Site Configuration"
 
     class Meta:
