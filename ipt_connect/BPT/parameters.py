@@ -14,14 +14,10 @@ instance_name = list(reversed(instance_name.rsplit("\\", 1)))[0]
 
 NAME = {
     "short": "BPT",
-    "full": "Brazilian Physicists' Tournament - ",
+    "full": "Brazilian Physicists' Tournament - 7th Edition",
     # ... and the name used in tournament overview
     "front": "7th Brazilian Physicists' Tournament",
 }
-
-# Tournaments to switch to by the menu
-# Usually you should set it to None
-# This is useful only for development and first stages of Three Science Tournament
 
 poster_url = "/static/BPT/banner.png"
 

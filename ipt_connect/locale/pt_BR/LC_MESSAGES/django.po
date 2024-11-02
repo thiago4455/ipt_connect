@@ -673,7 +673,7 @@ msgid ""
 "Round, Physics Fights and Problem."
 msgstr ""
 "A maior parte dos elementos exibidos podem ser clicados. Você pode acessar times, "
-"participantes individuais ou estatisticas de membros do juro, assim como detalhes de cada "
+"participantes individuais ou estatisticas de membros do júri, assim como detalhes de cada "
 "Rodada, Physics Fights e Problemas."
 
 #: IPTdev/templates/IPTdev/tournament_overview.html:27
