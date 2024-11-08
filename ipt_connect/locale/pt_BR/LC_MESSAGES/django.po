@@ -706,7 +706,7 @@ msgstr "Você pode também testar"
 
 #: IPTdev/templates/IPTdev/tournament_overview.html:38
 msgid "this beta tool to list forbidden problems."
-msgstr "essa ferramenta beta para listar os problemas proíbidos."
+msgstr "essa ferramenta beta para listar os problemas proibidos."
 
 #: IPTdev/templates/IPTdev/verify_all.html:7
 msgid ""

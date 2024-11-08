@@ -78,6 +78,8 @@ Available values:
 ### I added new text to the template. How сan I update language files?
 Run `python manage.py makemessages -a -e=html -i=grappelli/*`
 
+Then `django-admin compilemessages`
+
 ### How to compile language files?
 Language files are compiled automatically when the server starts.
 
