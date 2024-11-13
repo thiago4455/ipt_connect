@@ -49,13 +49,17 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'iprestrict',
 ) + INSTALLED_TOURNAMENTS
 
 MIGRATION_MODULES = dict(
     [(app, app + '.migrations.' + app) for app in INSTALLED_TOURNAMENTS]
 )
 
+IPRESTRICT_GEOIP_ENABLED = False
+
 MIDDLEWARE = (
+    'iprestrict.middleware.IPRestrictMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

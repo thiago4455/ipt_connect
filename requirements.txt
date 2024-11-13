@@ -8,3 +8,4 @@ gunicorn
 lxml
 requests
 unicodecsv
+django-iprestrict-redux

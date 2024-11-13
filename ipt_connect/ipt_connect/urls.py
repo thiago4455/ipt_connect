@@ -16,6 +16,7 @@ urlpatterns = [
     # url(r'^$', home, name='home'), #TemplateView.as_view(template_name='index.html')),#'ipt_connect.views.home'),
     re_path(r'^$', tournament_overview),
     re_path(r'^admin/', admin.site.urls),
+    re_path(r'^iprestrict/', include('iprestrict.urls', namespace='iprestrict')),
 ]
 
 for tournament in settings.INSTALLED_TOURNAMENTS:
