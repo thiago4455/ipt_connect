@@ -59,12 +59,11 @@ MIGRATION_MODULES = dict(
 IPRESTRICT_GEOIP_ENABLED = False
 
 MIDDLEWARE = (
-    'iprestrict.middleware.IPRestrictMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'iprestrict.middleware.IPRestrictMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #    'django.middleware.security.SecurityMiddleware',

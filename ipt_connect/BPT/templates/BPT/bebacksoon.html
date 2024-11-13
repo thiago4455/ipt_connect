@@ -17,23 +17,13 @@
         </center>
     </div>
 
-	<div class="content container">
-	<table style="width:100%">
-  <tr>
-    <td>
-      <!--
-      TODO: should we have this on our own server?
-      -->
-      <a href="{{ site_config.image_link_URL }}">
-        {% for i in ""|rjust:site_config.image_repeat_count %}
-          <img src = "{{ site_config.image_URL }}">
-        {% endfor %}
-      </a>
-    </td>
-  </tr>
-
-</table>
-    </div>
+	<div class="content container" style="display: flex; justify-content: center; min-height: 535px;">
+    <a href="{{ site_config.image_link_URL }}">
+      {% for i in ""|rjust:site_config.image_repeat_count %}
+        <img src = "{{ site_config.image_URL }}">
+      {% endfor %}
+    </a>
+  </div>
 
 
 {% endblock content %}
