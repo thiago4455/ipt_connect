@@ -19,7 +19,7 @@ NAME = {
     "front": "7th Brazilian Physicists' Tournament",
 }
 
-poster_url = "/static/BPT/banner.png"
+poster_url = "/static/BPT/banner2.png"
 
 website_url = "https://brazil.iptnet.info"
 
