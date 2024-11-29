@@ -109,7 +109,7 @@ msgstr "rejeitado eternamente pelo apresentador"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:35
 msgid "reported by reporter"
-msgstr "relatado pelo apresentador"
+msgstr "apresentado pelo apresentador"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:36
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:43
@@ -126,7 +126,7 @@ msgstr "oposto pelo oponente"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:49
 msgid "reported by opponent"
-msgstr "relatado pelo oponente"
+msgstr "apresentado pelo oponente"
 
 #: IPTdev/templates/IPTdev/includes/list_problems_with_remarks.html:56
 msgid "tried by opponent"
