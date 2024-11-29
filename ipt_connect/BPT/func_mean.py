@@ -3,7 +3,7 @@
 
 def mean(vec):
     if len(vec) != 0:
-        return float(sum(vec)) // len(vec)
+        return float(sum(vec)) / len(vec)
     else:
         return 0.0
 
