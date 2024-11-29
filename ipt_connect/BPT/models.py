@@ -718,7 +718,7 @@ class Round(models.Model):
         )
 
     def save(self, *args, **kwargs):
-        jurygrades = JuryGrade.objects.filter(round=self)
+        jurygrades = JuryGrade.objects.filter(round_id=self.id)
         print(("Update scores for", self))
 
         reporter_grades = list(
