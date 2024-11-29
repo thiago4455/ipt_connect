@@ -80,7 +80,7 @@ msgstr "Atualizar todas as pontuações (pode demorar alguns minutos)"
 
 #: IPTdev/templates/IPTdev/includes/list_forbidden_problems.html:8
 msgid "has already been "
-msgstr "já foi"
+msgstr "já foi "
 
 #: IPTdev/templates/IPTdev/includes/list_forbidden_problems.html:11
 msgid "No forbidden problems."
