@@ -20,11 +20,15 @@ def ipt_mean(vec):
 
     nhigh = nreject // 2
     nlow = nreject - nhigh
+    weight = 1 - divmod(((len(vec) - 1)/4), 1)[1]
 
     if nhigh == 0:
         vec = vec[nlow:]
     else:
         vec = vec[nlow:-nhigh]
+    
+    vec[0] = vec[0]  * weight
+    vec[len(vec) - 1] = vec[len(vec) - 1]  * weight
     return mean(vec)
 
 

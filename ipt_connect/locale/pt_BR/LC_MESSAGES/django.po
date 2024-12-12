@@ -274,7 +274,7 @@ msgstr "Nota do Opositor média"
 #: IPTdev/templates/IPTdev/jurys_overview.html:28
 #: IPTdev/templates/IPTdev/problems_overview.html:29
 msgid "Mean Review grade"
-msgstr "Nota do Apresentador média"
+msgstr "Nota do Moderador média"
 
 #: IPTdev/templates/IPTdev/listing_jurys.html:9
 #: IPTdev/templates/IPTdev/listing_jurys_web.html:9
