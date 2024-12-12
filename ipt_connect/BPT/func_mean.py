@@ -29,7 +29,8 @@ def ipt_mean(vec):
     
     vec[0] = vec[0]  * weight
     vec[len(vec) - 1] = vec[len(vec) - 1]  * weight
-    return mean(vec)
+    return float(sum(vec)) / (len(vec) - 2 + (2*weight))
+    # return mean(vec)
 
 
 def iypt_mean(vec):
