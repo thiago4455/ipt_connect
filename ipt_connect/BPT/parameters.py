@@ -62,7 +62,7 @@ reset_points_before_final = False
 # The maximum quantity of rounds
 # Affects mostly the combobox in round admin interface
 # Bonus points are calculated properly
-max_rounds_in_pf = 3
+max_rounds_in_pf = 4
 
 # The precision of scores
 # If 'None', no round up is made

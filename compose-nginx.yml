@@ -6,9 +6,11 @@ services:
     build: .
     restart: always
     container_name: ipt_connect
-  
+
     volumes:
       - ./ipt_connect:/ipt_connect
+      - static_data:/var/www/ipt_connect/static
+      - media_data:/var/www/ipt_connect/media
 
     environment:
       - WORKERS=3
@@ -28,16 +30,19 @@ services:
         max-file: "5"
 
     volumes:
-      - ./etc/ssl:/etc/nginx/ssl
       - ./etc/service.conf:/etc/nginx/service.conf
       - ./ipt_connect:/ipt_connect
+      - static_data:/var/www/ipt_connect/static
+      - media_data:/var/www/ipt_connect/media
 
     ports:
       - "80:80"
-      - "443:443"
 
     environment:
-      - TZ=Europe/Moscow
-      - LETSENCRYPT=true
-      - LE_EMAIL=name@example.com
-      - LE_FQDN=www.example.com
+      - TZ=America/Sao_Paulo
+      - LE_EMAIL=thiago@saturno.app
+      - LE_FQDN=bptnet.info
+
+volumes:
+  static_data:
+  media_data:

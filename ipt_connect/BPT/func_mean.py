@@ -9,10 +9,10 @@ def mean(vec):
 
 
 def ipt_mean(vec):
-    if len(vec) in [5, 6]:
-        nreject = 1
+    if len(vec) < 5:
+        nreject = 0
     else:
-        nreject = (len(vec) + 5) // 4
+        nreject = 1 + 2 * ((len(vec) - 5) // 4)
 
     # TODO: the following code looks messy, but it works.
     # There was an unsuccessful attempt to refactor it.

@@ -63,7 +63,7 @@ MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'iprestrict.middleware.IPRestrictMiddleware',
+#    'iprestrict.middleware.IPRestrictMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #    'django.middleware.security.SecurityMiddleware',
@@ -137,6 +137,11 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://bptnet.info',
+    'https://www.bptnet.info',
+]
 
 SOLO_CACHE = 'default'
 SOLO_CACHE_TIMEOUT = 5 * 60
